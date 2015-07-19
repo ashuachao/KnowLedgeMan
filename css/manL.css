@@ -195,6 +195,7 @@
 	left: 40%;
 	top: 40%;
 	display: none;
+	z-index: 9999;
 }
 .dialog input{
 	box-sizing:border-box;
@@ -247,4 +248,5 @@
 	position: absolute;
 	left: 0;
 	top: 0;
+	display: none;
 }
