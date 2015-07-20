@@ -1,4 +1,5 @@
 *{margin: 0;padding: 0}
+ul{list-style: none;}
 .header{text-align:center;background: black;color: #EEE;}
 .container{margin: 10px auto;width: 95%;height: 600px;box-sizing:border-box;}
 .container .type{	
