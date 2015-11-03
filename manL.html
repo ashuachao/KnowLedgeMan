@@ -15,8 +15,8 @@
 		<div class="type" id="root">
 			<h2>笔记本</h1>
 			<ul class="catalog" id="catalog">
-				<li>设计(234)</li>
-				<li>体育锻炼(3)</li>
+				<!-- <li><span class='cata'>设计</span><span>(1)</span></li>
+				<li><span class='cata'>体育锻炼</span><span>(23)</span></li> -->
 			</ul>	
 			<div class="add-catalog">
 				<a href="#"></a>
@@ -32,16 +32,16 @@
 				<a href="" class="add-note">新建笔记</a>
 			</div>
 			<ul class="note-list-item" id="note-list-item">
-				<li><h5>图片排版与字体排版</h5>
-				<p>如果两张图片风格、内容和色调地下你赶紧撒打算连很少看到经费火辣的思考就发货飒飒大三大四的撒旦打发斯蒂芬撒范德萨发大水发大水发撒打发第三方爱迪生飞撒旦飞洒的范德萨范德萨发东方航空的疯狂哈根达斯就噶的说法过段时间股份合计</p></li>
+				<!-- <li><h5>图片排版与字体排版</h5>
+				<p>如果两张图片风格、内容和色调地下你赶紧撒打算连很少看到经费火辣的思考就发货飒飒大三大四的撒旦打发斯蒂芬撒范德萨发大水发大水发撒打发第三方爱迪生飞撒旦飞洒的范德萨范德萨发东方航空的疯狂哈根达斯就噶的说法过段时间股份合计</p></li> -->
 			</ul>
 		</div>
 		<div class="note-content">
 			<div class="note-contentHeader">
-				<span class="note-title">用户关注中心径向响应</span>
+				<span class="note-title"></span>
 				<a href="#" class="del-note"></a>
 			</div>
-			<div class="note-contentR">两张图片风格、内容和色调地下你赶紧撒打算连很少看到经费火辣的思考就发货飒飒大三大四的撒旦打发斯蒂芬撒范德萨发大水发大水发撒打发第三方爱迪生飞撒旦飞洒的范德萨范德萨发东方航空的疯狂哈根达斯就噶的说法过段时间股份合计</div>
+			<div class="note-contentR"></div>
 		</div>
 	</div>
 	<!-- 右键自定义菜单 -->
@@ -51,12 +51,35 @@
 	</div>
 	<!-- 对话框 -->
 	<div class="dialog" id="dialog">
+		<a class="write" href="javascript:(0)">文本模式</a>
+		<a class="draw" href="javascript:(0)">绘画模式</a>
 		<input class="header" type="text" value="header" />
-		<input class="contentR" type="text" value="content"/>
+		<textarea class="writeArea contentR" value="content"/></textarea>
+		<canvas class="palette contentR"></canvas>
 		<div class="dialog-btn">
 			<a href="#" class="confirm">confirm</a>
 			<a href="#" class="cancel ">cancel</a>
 		</div>
 	</div>
+	<div class="Aconfirm">
+		<div class="confirmT">
+			<h4>你确定要删除"文章"</h4>
+			<span class="confirmTitle">asd</span>
+		</div>
+		<div class="confirmB">
+			<a href="javascript:(0)" class="Bconfirm">confirm</a>
+			<a href="javascript:(0)" class="Bcancel">cancel</a>
+		</div>
+	</div>
 	<div class="mask" id="mask"`></div>
+	<!-- 一系列模板 -->
+	<script id="cInput" type="text/plain">
+		<span class="cata">{cata}</span><span>{count}</span>
+	</script>
+	<script id="nInput" type="text/plain">
+		<h5>{header}</h5><p>{content}</p>
+	</script>
+	<script type="text/javascript" src="./js/method.js"></script>
+	<script type="text/javascript" src="./js/Store.js"></script>
+	<script type="text/javascript" src="./js/Note.js"></script>
 </body>

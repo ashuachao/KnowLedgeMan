@@ -20,11 +20,17 @@ ul{list-style: none;}
 .container .type .catalog{
 	color:#656464;
 	list-style: none;
+	overflow: hidden;
+}
+.container .type .catalog .cataHover{
+	color: #191818;
+	background-color:#656464; 
 }
 .container .type .catalog li{
 	margin:30px;
 	margin-left: 20px;
 	font-weight: bold;
+	cursor: pointer;
 }
 .container .type .add-catalog{
 	margin: 20px 0 ;
@@ -96,13 +102,18 @@ ul{list-style: none;}
 }
 .container .note-list .note-list-item{
 	box-sizing:border-box;
-	background-color: #F6F6F6;
 	width: 95%;
 	margin: 0 auto;
-	height:140px;
 	color: #686A6E;
+}
+.container .note-list .note-list-item li.noteHover{
 	border: 2px solid #F6F6F6;
-	border-radius: 2px;
+	border-color: #7CC2E7
+
+}
+.container .note-list .note-list-item li{
+	background-color: #F6F6F6;
+		border-radius: 5px;
 }
 .container .note-list .note-list-item h5{
 	position: relative;
@@ -170,6 +181,7 @@ ul{list-style: none;}
 	background-color: #191818;
 	padding: 2px;
 	display: none;
+	position: absolute;
 }
 .context-menu a{
 	box-sizing:border-box;
@@ -186,29 +198,56 @@ ul{list-style: none;}
 }
 /*对话框样式*/
 .dialog{
-	width: 20%;
-	height: 20%;
+	width: 40%;
+	height: 60%;
 	border: 5px solid bold;
 	border-radius: 5px;
 	background-color: #191818;
 	padding: 2px;
 	position: absolute;
-	left: 40%;
-	top: 40%;
 	display: none;
 	z-index: 9999;
+	left:50%;
+	top: 50%;
+	transform:translateX(-50%) translateY(-50%);
 }
-.dialog input{
+
+.dialog .write,.draw{
+	background-color: #456;
+	border-radius: 10px;
+	font-size: 10px;
+	text-decoration: none;
+}
+.dialog .header{
+	color: #000;
+	font-size: 30px;
+	line-height: 30px;
+	background-color:#EEE;
 	box-sizing:border-box;
 	display: block;
 	width: 100%;
-	height: 60%;
+	height: 15%;
+}
+.dialog .contentR{
+	box-sizing:border-box;
+	display: block;
+	width: 100%;
+	height:70%;
+	font-weight: bold;
+	font-size: 20px;
+}
+.dialog .writeArea{
+/*	display: none;*/
+}
+.dialog .palette{
+	display: none;
+	background-color: #fff;
 }
 .dialog .dialog-btn{
 	position: relative;
 	box-sizing:border-box;
 	width: 100%;
-	height: 40%;
+	height: 10%;
 	padding: 0 10px;
 }
 .dialog .dialog-btn .confirm{
@@ -223,8 +262,17 @@ ul{list-style: none;}
 	line-height: 250%;
 	font-weight: bold;
 	text-align: center;
-	
 	color: #FFFEFE;
+}
+.dialog .dialog-btn .confirm:hover{
+	color: #191818;
+	background-color: #EEE;
+	border: 1px solid #FFF bold;
+}
+.dialog .dialog-btn .cancel:hover{
+	color: #191818;
+	background-color: #EEE;
+	border: 1px solid #FFF bold;
 }
 .dialog .dialog-btn .cancel{
 	box-sizing:border-box;
@@ -250,4 +298,52 @@ ul{list-style: none;}
 	left: 0;
 	top: 0;
 	display: none;
+}
+/*确认框*/
+.Aconfirm{
+	box-sizing:border-box;
+	width: 20%;
+	height: 25%;
+	background-color: #F6F6F6;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-top: 10px;
+	display: none;
+	z-index: 9999;
+}
+.Aconfirm .confirmT{
+	width: 100%;
+	height: 70%;
+	text-align: center;
+
+}
+.Aconfirm .confirmTitle{
+	font-size: 20px;
+	line-height: 200%;
+	font-weight: bold;
+	color: #DA3610
+}
+.Aconfirm .confirmB{
+	line-height: 200%;
+	width: 100%;
+	height: 30%;
+}
+.Aconfirm .confirmB a{
+	height: 100%;
+	float: left;
+	text-decoration: none;
+	width:50%;
+	text-align: center;
+	background-color: #000;
+	color: #656464;
+}
+.Aconfirm .confirmB a:hover{
+	color: #000;
+	background-color: #656464;
+}
+.inputSet{
+	text-align: center;
+	border-radius: 10px;
+	width: 100%;
 }
